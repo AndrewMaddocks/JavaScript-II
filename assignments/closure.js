@@ -3,10 +3,32 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
+function space(outterSpace) {
+  const star = "stars";
+  console.log(`Theres just a bunch of ${star} up here in ${outterSpace}.`);
+  debugger;
 
+  function sky(air) {
+    const cloud = "clouds";
+    console.log(
+      `I'm in the ${air} in a plane  its night time and i can see the ${star}. `
+    );
+    debugger;
+
+    function ground(earth) {
+      const tree = "trees";
+      console.log(
+        `I live on the ${earth} where there are ${tree} from here i can see the ${cloud} in the ${air} and the ${star} in ${outterSpace}.`
+      );
+      debugger;
+    }
+    ground("ground");
+  }
+  sky("sky");
+}
+space("space");
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
